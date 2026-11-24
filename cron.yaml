@@ -1,0 +1,8 @@
+version: 1
+cron:
+  - name: "hourly-task"
+    url: "/scheduled-task"
+    schedule: "0 * * * *"
+  - name: "daily-cleanup"
+    url: "/cleanup"
+    schedule: "0 0 * * *"
