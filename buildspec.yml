@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing dependencies"
+      - npm install
+
+  pre_build:
+    commands:
+      - echo "We are in the pre-build phase"
+
+  build:
+    commands:
+      - echo "We are in the build phase"
+      - grep -Fq "Congratulations" index.html
+
+  post_build:
+    commands:
+      - echo "We are in the post-build phase"
